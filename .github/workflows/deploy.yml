@@ -5,9 +5,21 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "deploy"
+  cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
@@ -15,12 +27,14 @@ jobs:
           node-version: 16
           cache: yarn
       - run: yarn install --frozen-lockfile
-
       - name: Build
         run: yarn blog:build
-
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: actions/upload-pages-artifact@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: blog/.vitepress/dist
+          path: blog/.vitepress/dist
+      - name: Depoy to Github Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
