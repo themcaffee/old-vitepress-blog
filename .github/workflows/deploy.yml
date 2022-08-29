@@ -35,6 +35,6 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: blog/.vitepress/dist
-      - name: Depoy to Github Pages
+      - name: Deploy to Github Pages
         id: deployment
         uses: actions/deploy-pages@v1
