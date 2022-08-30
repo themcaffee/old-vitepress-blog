@@ -31,3 +31,10 @@ to each of the challenges are included in the folder with the binary and source.
 This is an experimental piece of software that pits neural networks created using genetic algorithms against each other. It is similar to
 John Conway's game of life where there are organisms that live on a 2d plane. Unlike the original game of life, the organisms can decide 
 from a subset of actions using a neural network.
+
+
+## LED Patterns
+
+[Website](https://led.mitchmcaffee.com/)    /   [Github](https://github.com/themcaffee/led-patterns)
+
+Web application to easily create pixels of images or by painting with a cursor for use in a LED matrix. Has a configurable height and width and allows any image to be made into pixel art.
