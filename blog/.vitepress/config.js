@@ -4,6 +4,7 @@ export default {
   themeConfig: {
     siteTitle: 'Mitch McAffee',
     nav: [
+        { text: 'Projects', link: '/projects' },
         { text: 'Contact', link: '/contact' },
         { text: 'Github', link: 'https://github.com/themcaffee' },
         { text: 'LinkedIn', link: 'https://www.linkedin.com/in/mitch-mcaffee' }

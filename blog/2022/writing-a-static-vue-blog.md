@@ -7,7 +7,7 @@ it's easy to create blog posts using markdown but also possible to use Vue for t
 method I used to setup this blog and you can view the source [here](https://github.com/themcaffee/themcaffee.github.io).
 
 
-### Setup
+## Setup
 
 The first step is to install the necessary dependencies. We are going to be using Vue and Vitepress to handle building our site. This guide
 assumes that you have Node.js>=16.10 installed.
@@ -33,7 +33,7 @@ yarn add --dev vitepress vue
 ```
 
 
-### Making your first page
+## Making your first page
 
 Create your home page
 ```
@@ -59,7 +59,7 @@ yarn blog:dev
 ```
 
 
-### Configuring your site
+## Configuring your site
 
 To customize the site title and navigation, first create the file `blog/.vitepress/config.js` in your project folder with the following:
 ```
@@ -73,7 +73,7 @@ export default {
 ```
 This will set your site title and description to whatever you would like. There are also other options to [update your icon](https://vitepress.vuejs.org/config/theme-configs) if you so please.
 
-### Adding links
+## Adding links
 
 If you wanted to link to other pages in your header then add the following to `blog/.vitepress/config.js`:
 
@@ -92,7 +92,7 @@ export default {
 }
 ```
 
-### Adding a blog post
+## Adding a blog post
 
 Create a new file at `blog/2022/new-blog-post.md` with the following:
 ```
@@ -122,7 +122,7 @@ export default {
 Now if you navigate to `/newpage`, you will see the new page that has been created and is navigable from the sidebar.
 
 
-### Deploy to Github Pages
+## Deploy to Github Pages
 
 The first step to deploy to github pages is to setup the github action that will run to build and deploy our files. Create a new file `.github/workflows/deploy.yml` in your project root with the following:
 ```
